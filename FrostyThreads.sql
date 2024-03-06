@@ -29,7 +29,7 @@ CREATE TABLE tb_descuentos(
 	CONSTRAINT ck_descuento CHECK(descuento>=0 && descuento<=100)
 );
 
-CREATE TABLE tb_marca(
+CREATE TABLE tb_marcas(
 	id_marca INT AUTO_INCREMENT PRIMARY KEY,
 	marca VARCHAR(32)
 );
@@ -136,4 +136,10 @@ CREATE USER 'admin'@'localhost' IDENTIFIED BY '123456';
 
 GRANT INSERT, UPDATE, SELECT, DELETE, EXECUTE, TRIGGER, CREATE ROUTINE, ALTER ROUTINE, CREATE VIEW ON 
 FrostyThreads.* TO 'admin'@'localhost';
+
+
+
+
+
+
 
