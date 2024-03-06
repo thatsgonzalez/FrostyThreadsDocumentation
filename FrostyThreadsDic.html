@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="WB DataDic" />
+    <meta name="description" content="db_frosty_threads Data Dictionary." />
+    <title>db_frosty_threads Data Dictionary</title>
+    <style type="text/css">
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        abbr {
+            cursor: help;
+        }
+
+        table,
+        td,
+        th {
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        table caption {
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        caption {
+            color: black;
+        }
+
+        td,
+        th {
+            border-color: silver;
+        }
+
+        tr:hover {
+            color: #333;
+            background-color: #F2F2F2;
+        }
+
+        th {
+            background-color: silver;
+        }
+
+        td {
+            color: gray;
+        }
+
+        ul {
+            font-style: italic;
+        }
+
+        #title-sect {
+            color: gray;
+            text-align: right;
+        }
+
+        .proj-desc {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title-sect">
+        <h1>db_frosty_threads<br> Data Dictionay</h1>
+        <p>
+            <em>2024-02-09</em>
+        </p>
+        <p class="proj-desc">
+            <em></em>
+        </p>
+    </div>
+    <h2>Alphabetic Index</h2>
+    <ul>
+        <li><a href='#tb_categorias'>tb_categorias</a></li>
+        <li><a href='#tb_comentarios'>tb_comentarios</a></li>
+        <li><a href='#tb_descuentos'>tb_descuentos</a></li>
+        <li><a href='#tb_detalle_ordenes'>tb_detalle_ordenes</a></li>
+        <li><a href='#tb_domicilios'>tb_domicilios</a></li>
+        <li><a href='#tb_ordenes'>tb_ordenes</a></li>
+        <li><a href='#tb_prendas'>tb_prendas</a></li>
+        <li><a href='#tb_provincias'>tb_provincias</a></li>
+        <li><a href='#tb_tallas'>tb_tallas</a></li>
+        <li><a href='#tb_marcas'>tb_marcas</a></li>
+        <li><a href='#tb_tipos_tallas'>tb_tipos_tallas</a></li>
+        <li><a href='#tb_tipos_administradores'>tb_tipos_administradores</a></li>
+        <li><a href='#tb_clientes'>tb_clientes</a></li>
+        <li><a href='#tb_administradores'>tb_administradores</a></li>
+    </ul>
+    <table id='tb_categorias'>
+        <caption>tb_categorias</caption>
+        <tr>
+            <td colspan='11'></td>
+        </tr>
+        <tr>
+            <th>Column name</th>
+            <th>DataType</th>
+            <th><abbr title='Primary Key'>PK</abbr></th>
+            <th><abbr title='Not Null'>NN</abbr></th>
+            <th><abbr title='Unique'>UQ</abbr></th>
+            <th><abbr title='Binary'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Increment'>AI</abbr></th>
+            <th>Default</th>
+            <th>Comment</th>
+        </tr>
+        <tr>
+            <td>id_categoria</td>
+            <td>INT</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>NULL</td>
+            <td> identificador de la tabla</td>
+        </tr>
+        <tr>
+            <td>categoria</td>
+            <td>VARCHAR(32)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>nombre de la categoria</td>
+        </tr>
+        <tr>
+            <td>categoria_img</td>
+            <td>VARCHAR(25)</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td>NULL</td>
+            <td>imagen de la categoria</td>
+        </tr>
+        <table id='tb_comentarios'>
+            <caption>tb_comentarios</caption>
+            <tr>
+                <td colspan='11'></td>
+            </tr>
+            <tr>
+                <th>Column name</th>
+                <th>DataType</th>
+                <th><abbr title='Primary Key'>PK</abbr></th>
+                <th><abbr title='Not Null'>NN</abbr></th>
+                <th><abbr title='Unique'>UQ</abbr></th>
+                <th><abbr title='Binary'>BIN</abbr></th>
+                <th><abbr title='Unsigned'>UN</abbr></th>
+                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                <th><abbr title='Auto Increment'>AI</abbr></th>
+                <th>Default</th>
+                <th>Comment</th>
+            </tr>
+            <tr>
+                <td>id_comentario</td>
+                <td>INT</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>NULL</td>
+                <td> identificador de la tabla </td>
+            </tr>
+            <tr>
+                <td>detalle_comentario</td>
+                <td>VARCHAR(32)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>contenido del comentario</td>
+            </tr>
+            <tr>
+                <td>calificacion_prenda</td>
+                <td>INT(1)</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>calificacion dada por el usuario</td>
+            </tr>
+            <tr>
+                <td>estado_comentario</td>
+                <td>TINYINT</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td>0</td>
+                <td>estado de comentario</td>
+            </tr>
+            <tr>
+                <td>id_detalle_orden</td>
+                <td>INT</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&#10004;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td class='attr'>&nbsp;</td>
+                <td></td>
+                <td>identificador de la tabla detalle pedido</td>
+            </tr>
+            <table id='tb_descuentos'>
+                <caption>tb_descuentos</caption>
+                <tr>
+                    <td colspan='11'></td>
+                </tr>
+                <tr>
+                    <th>Column name</th>
+                    <th>DataType</th>
+                    <th><abbr title='Primary Key'>PK</abbr></th>
+                    <th><abbr title='Not Null'>NN</abbr></th>
+                    <th><abbr title='Unique'>UQ</abbr></th>
+                    <th><abbr title='Binary'>BIN</abbr></th>
+                    <th><abbr title='Unsigned'>UN</abbr></th>
+                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                    <th>Default</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>id_descuento</td>
+                    <td>INT</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>NULL</td>
+                    <td> identificador de la tabla </td>
+                </tr>
+                <tr>
+                    <td>descuento</td>
+                    <td>INT</td>
+                    <td>&nbsp;</td>
+                    <td>&#10004;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class='attr'>&nbsp;</td>
+                    <td></td>
+                    <td>porcentaje del descuento</td>
+                </tr>
+                <table id='tb_detalle_ordenes'>
+                    <caption>tb_detalle_ordenes</caption>
+                    <tr>
+                        <td colspan='11'></td>
+                    </tr>
+                    <tr>
+                        <th>Column name</th>
+                        <th>DataType</th>
+                        <th><abbr title='Primary Key'>PK</abbr></th>
+                        <th><abbr title='Not Null'>NN</abbr></th>
+                        <th><abbr title='Unique'>UQ</abbr></th>
+                        <th><abbr title='Binary'>BIN</abbr></th>
+                        <th><abbr title='Unsigned'>UN</abbr></th>
+                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                        <th>Default</th>
+                        <th>Comment</th>
+                    </tr>
+                    <tr>
+                        <td>id_detalle_orden</td>
+                        <td>INT</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>NULL</td>
+                        <td> identificador de la tabla </td>
+                    </tr>
+                    <tr>
+                        <td>id_prenda</td>
+                        <td>INT</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>prenda que se está comprando</td>
+                    </tr>
+                    <tr>
+                        <td>id_orden</td>
+                        <td>INT</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>orden a la que la prenda a vender pertenece</td>
+                    </tr>
+                    <tr>
+                        <td>cantidad_prenda</td>
+                        <td>INT</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>cantidad de unidades a vender</td>
+                    </tr>
+                    <tr>
+                        <td>fecha_orden</td>
+                        <td>DATE</td>
+                        <td>&nbsp;</td>
+                        <td>&#10004;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td class='attr'>&nbsp;</td>
+                        <td></td>
+                        <td>fecha de la orden</td>
+                    </tr>
+                    <table id='tb_domicilios'>
+                        <caption>tb_domicilios</caption>
+                        <tr>
+                            <td colspan='11'></td>
+                        </tr>
+                        <tr>
+                            <th>Column name</th>
+                            <th>DataType</th>
+                            <th><abbr title='Primary Key'>PK</abbr></th>
+                            <th><abbr title='Not Null'>NN</abbr></th>
+                            <th><abbr title='Unique'>UQ</abbr></th>
+                            <th><abbr title='Binary'>BIN</abbr></th>
+                            <th><abbr title='Unsigned'>UN</abbr></th>
+                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                            <th>Default</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>id_domicilio</td>
+                            <td>INT</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>NULL</td>
+                            <td> identificador de la tabla </td>
+                        </tr>
+                        <tr>
+                            <td>id_provincia</td>
+                            <td>INT</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>provincia a la que pertence el domicilio</td>
+                        </tr>
+                        <tr>
+                            <td>detalle_direccion</td>
+                            <td>VARCHAR(255)</td>
+                            <td>&nbsp;</td>
+                            <td>&#10004;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td class='attr'>&nbsp;</td>
+                            <td></td>
+                            <td>detalle del domicilio</td>
+                        </tr>
+                        <table id='tb_ordenes'>
+                            <caption>tb_ordenes</caption>
+                            <tr>
+                                <td colspan='11'></td>
+                            </tr>
+                            <tr>
+                                <th>Column name</th>
+                                <th>DataType</th>
+                                <th><abbr title='Primary Key'>PK</abbr></th>
+                                <th><abbr title='Not Null'>NN</abbr></th>
+                                <th><abbr title='Unique'>UQ</abbr></th>
+                                <th><abbr title='Binary'>BIN</abbr></th>
+                                <th><abbr title='Unsigned'>UN</abbr></th>
+                                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                <th><abbr title='Auto Increment'>AI</abbr></th>
+                                <th>Default</th>
+                                <th>Comment</th>
+                            </tr>
+                            <tr>
+                                <td>id_orden</td>
+                                <td>INT</td>
+                                <td>&#10004;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&#10004;</td>
+                                <td>NULL</td>
+                                <td> identificador de la tabla </td>
+                            </tr>
+                            <tr>
+                                <td>id_domicilio</td>
+                                <td>INT</td>
+                                <td>&nbsp;</td>
+                                <td>&#10004;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class='attr'>&nbsp;</td>
+                                <td></td>
+                                <td>domicilio donde se esta realizando la orden</td>
+                            </tr>
+                            <tr>
+                                <td>estado_orden</td>
+                                <td>ENUM('pendiente', 'enviado', 'recibido', 'cancelado')</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class='attr'>&nbsp;</td>
+                                <td>NULL</td>
+                                <td>estado de la orden</td>
+                            </tr>
+                            <table id='tb_prendas'>
+                                <caption>tb_prendas</caption>
+                                <tr>
+                                    <td colspan='11'></td>
+                                </tr>
+                                <tr>
+                                    <th>Column name</th>
+                                    <th>DataType</th>
+                                    <th><abbr title='Primary Key'>PK</abbr></th>
+                                    <th><abbr title='Not Null'>NN</abbr></th>
+                                    <th><abbr title='Unique'>UQ</abbr></th>
+                                    <th><abbr title='Binary'>BIN</abbr></th>
+                                    <th><abbr title='Unsigned'>UN</abbr></th>
+                                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                                    <th>Default</th>
+                                    <th>Comment</th>
+                                </tr>
+                                <tr>
+                                    <td>id_prenda</td>
+                                    <td>INT</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>NULL</td>
+                                    <td> identificador de la tabla </td>
+                                </tr>
+                                <tr>
+                                    <td>id_categoria</td>
+                                    <td>INT</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td></td>
+                                    <td>categoria a la que la prenda pertenece</td>
+                                </tr>
+                                <tr>
+                                    <td>id_talla</td>
+                                    <td>INT</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td></td>
+                                    <td>talla de la prenda</td>
+                                </tr>
+                                <tr>
+                                    <td>precio</td>
+                                    <td>INT</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td></td>
+                                    <td>precio de la prenda</td>
+                                </tr>
+                                <tr>
+                                    <td>cantidad</td>
+                                    <td>INT</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td></td>
+                                    <td>cantidad de existencias</td>
+                                </tr>
+                                <tr>
+                                    <td>detalle_prenda</td>
+                                    <td>VARCHAR(255)</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td>NULL</td>
+                                    <td>descripcion breve de la prenda</td>
+                                </tr>
+                                <tr>
+                                    <td>marca</td>
+                                    <td>VARCHAR(32)</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td>NULL</td>
+                                    <td>marca de la prenda</td>
+                                </tr>
+                                <tr>
+                                    <td>prenda_img</td>
+                                    <td>VARCHAR(25)</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td>NULL</td>
+                                    <td>imagen de la prenda</td>
+                                </tr>
+                                <tr>
+                                    <td>id_descuento</td>
+                                    <td>INT</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td class='attr'>&nbsp;</td>
+                                    <td></td>
+                                    <td>descuento sobre el precio de la prenda</td>
+                                </tr>
+                                <tr>
+                                    <td>estado_prenda</td>
+                                    <td>BOOLEAN</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#10004;</td>
+                                    <td>0</td>
+                                    <td> identificador de la tabla </td>
+                                </tr>
+                                <table id='tb_provincias'>
+                                    <caption>tb_provincias</caption>
+                                    <tr>
+                                        <td colspan='11'></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Column name</th>
+                                        <th>DataType</th>
+                                        <th><abbr title='Primary Key'>PK</abbr></th>
+                                        <th><abbr title='Not Null'>NN</abbr></th>
+                                        <th><abbr title='Unique'>UQ</abbr></th>
+                                        <th><abbr title='Binary'>BIN</abbr></th>
+                                        <th><abbr title='Unsigned'>UN</abbr></th>
+                                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                                        <th>Default</th>
+                                        <th>Comment</th>
+                                    </tr>
+                                    <tr>
+                                        <td>id_provincia</td>
+                                        <td>INT</td>
+                                        <td>&#10004;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&#10004;</td>
+                                        <td>NULL</td>
+                                        <td> identificador de la tabla </td>
+                                    </tr>
+                                    <tr>
+                                        <td>provincia</td>
+                                        <td>VARCHAR(32)</td>
+                                        <td>&nbsp;</td>
+                                        <td>&#10004;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td>&nbsp;</td>
+                                        <td class='attr'>&nbsp;</td>
+                                        <td></td>
+                                        <td>nombre de la provincia</td>
+                                    </tr>
+                                    <table id='tb_tallas'>
+                                        <caption>tb_tallas</caption>
+                                        <tr>
+                                            <td colspan='11'></td>
+                                        </tr>
+                                        <tr>
+                                            <th>Column name</th>
+                                            <th>DataType</th>
+                                            <th><abbr title='Primary Key'>PK</abbr></th>
+                                            <th><abbr title='Not Null'>NN</abbr></th>
+                                            <th><abbr title='Unique'>UQ</abbr></th>
+                                            <th><abbr title='Binary'>BIN</abbr></th>
+                                            <th><abbr title='Unsigned'>UN</abbr></th>
+                                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                                            <th>Default</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                        <tr>
+                                            <td>id_talla</td>
+                                            <td>INT</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>NULL</td>
+                                            <td> identificador de la tabla </td>
+                                        </tr>
+                                        <tr>
+                                            <td>talla</td>
+                                            <td>VARCHAR(8)</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>nombre de la talla</td>
+                                        </tr>
+                                        <tr>
+                                            <td>id_tipo_talla</td>
+                                            <td>INT</td>
+                                            <td>&nbsp;</td>
+                                            <td>&#10004;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td class='attr'>&nbsp;</td>
+                                            <td></td>
+                                            <td>tipo de talla</td>
+                                        </tr>
+                                        <table id='tb_marcas'>
+                                            <caption>tb_marcas</caption>
+                                            <tr>
+                                                <td colspan='11'></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Column name</th>
+                                                <th>DataType</th>
+                                                <th><abbr title='Primary Key'>PK</abbr></th>
+                                                <th><abbr title='Not Null'>NN</abbr></th>
+                                                <th><abbr title='Unique'>UQ</abbr></th>
+                                                <th><abbr title='Binary'>BIN</abbr></th>
+                                                <th><abbr title='Unsigned'>UN</abbr></th>
+                                                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                <th>Default</th>
+                                                <th>Comment</th>
+                                            </tr>
+                                            <tr>
+                                                <td>id_marca</td>
+                                                <td>INT</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>NULL</td>
+                                                <td> identificador de la tabla</td>
+                                            </tr>
+                                            <tr>
+                                                <td>marca</td>
+                                                <td>VARCHAR(32)</td>
+                                                <td>&nbsp;</td>
+                                                <td>&#10004;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td class='attr'>&nbsp;</td>
+                                                <td></td>
+                                                <td>nombre de la marca</td>
+                                            </tr>
+                                            
+                                            <table id='tb_tipos_tallas'>
+                                                <caption>tb_tipos_tallas</caption>
+                                                <tr>
+                                                    <td colspan='11'></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Column name</th>
+                                                    <th>DataType</th>
+                                                    <th><abbr title='Primary Key'>PK</abbr></th>
+                                                    <th><abbr title='Not Null'>NN</abbr></th>
+                                                    <th><abbr title='Unique'>UQ</abbr></th>
+                                                    <th><abbr title='Binary'>BIN</abbr></th>
+                                                    <th><abbr title='Unsigned'>UN</abbr></th>
+                                                    <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                    <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                    <th>Default</th>
+                                                    <th>Comment</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>id_tipo_talla</td>
+                                                    <td>INT</td>
+                                                    <td>&#10004;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&#10004;</td>
+                                                    <td>NULL</td>
+                                                    <td> identificador de la tabla </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>tipo_talla</td>
+                                                    <td>VARCHAR(32)</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&#10004;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td class='attr'>&nbsp;</td>
+                                                    <td></td>
+                                                    <td>nombre del tipo de talla</td>
+                                                </tr>
+                                                <table id='tb_tipos_administradores'>
+                                                    <caption>tb_tipos_administradores</caption>
+                                                    <tr>
+                                                        <td colspan='11'></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Column name</th>
+                                                        <th>DataType</th>
+                                                        <th><abbr title='Primary Key'>PK</abbr></th>
+                                                        <th><abbr title='Not Null'>NN</abbr></th>
+                                                        <th><abbr title='Unique'>UQ</abbr></th>
+                                                        <th><abbr title='Binary'>BIN</abbr></th>
+                                                        <th><abbr title='Unsigned'>UN</abbr></th>
+                                                        <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                        <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                        <th>Default</th>
+                                                        <th>Comment</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>id_tipo_administrador</td>
+                                                        <td>INT</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&#10004;</td>
+                                                        <td>NULL</td>
+                                                        <td> identificador de la tabla </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>tipo_administrador</td>
+                                                        <td>VARCHAR(16)</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&#10004;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td class='attr'>&nbsp;</td>
+                                                        <td></td>
+                                                        <td>nombre del tipo de usuario</td>
+                                                    </tr>
+                                                    <table id='tb_clientes'>
+                                                        <caption>tb_clientes</caption>
+                                                        <tr>
+                                                            <td colspan='11'></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Column name</th>
+                                                            <th>DataType</th>
+                                                            <th><abbr title='Primary Key'>PK</abbr></th>
+                                                            <th><abbr title='Not Null'>NN</abbr></th>
+                                                            <th><abbr title='Unique'>UQ</abbr></th>
+                                                            <th><abbr title='Binary'>BIN</abbr></th>
+                                                            <th><abbr title='Unsigned'>UN</abbr></th>
+                                                            <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                            <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                            <th>Default</th>
+                                                            <th>Comment</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>id_cliente</td>
+                                                            <td>INT</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>NULL</td>
+                                                            <td> identificador de la tabla </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>nombre_cliente</td>
+                                                            <td>VARCHAR(64)</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td class='attr'>&nbsp;</td>
+                                                            <td></td>
+                                                            <td>nombre del cliente</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>apellido_cliente</td>
+                                                            <td>VARCHAR(64)</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td class='attr'>&nbsp;</td>
+                                                            <td></td>
+                                                            <td>apellido del cliente</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>email_cliente</td>
+                                                            <td>VARCHAR(128)</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td class='attr'>&nbsp;</td>
+                                                            <td></td>
+                                                            <td>email del cliente</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>clave_cliente</td>
+                                                            <td>VARCHAR(255)</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&#10004;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td>&nbsp;</td>
+                                                            <td class='attr'>&nbsp;</td>
+                                                            <td></td>
+                                                            <td>clave de acceso para el cliente</td>
+                                                        </tr>
+                                                
+                                                        <table id='tb_administradores'>
+                                                            <caption>tb_administradores</caption>
+                                                            <tr>
+                                                                <td colspan='11'></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Column name</th>
+                                                                <th>DataType</th>
+                                                                <th><abbr title='Primary Key'>PK</abbr></th>
+                                                                <th><abbr title='Not Null'>NN</abbr></th>
+                                                                <th><abbr title='Unique'>UQ</abbr></th>
+                                                                <th><abbr title='Binary'>BIN</abbr></th>
+                                                                <th><abbr title='Unsigned'>UN</abbr></th>
+                                                                <th><abbr title='Zero Fill'>ZF</abbr></th>
+                                                                <th><abbr title='Auto Increment'>AI</abbr></th>
+                                                                <th>Default</th>
+                                                                <th>Comment</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>id_administrador</td>
+                                                                <td>INT</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>NULL</td>
+                                                                <td> identificador de la tabla </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>nombre_administrador</td>
+                                                                <td>VARCHAR(64)</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>nombre del administrador</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>apellido_administrador</td>
+                                                                <td>VARCHAR(64)</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>apellido del administrador</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>email_administrador</td>
+                                                                <td>VARCHAR(128)</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>email del administrador</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>clave_administrador</td>
+                                                                <td>VARCHAR(255)</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>clave de acceso para el administrador</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>id_tipo_administrador</td>
+                                                                <td>INT</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&#10004;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td>&nbsp;</td>
+                                                                <td class='attr'>&nbsp;</td>
+                                                                <td></td>
+                                                                <td>tipo de administrador</td>
+                                                            </tr>
+                                                    </table>
+</body>
+
+</html>
