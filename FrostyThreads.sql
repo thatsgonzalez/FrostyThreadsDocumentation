@@ -135,7 +135,7 @@ CREATE TABLE tb_comentarios(
 CREATE USER 'admin'@'localhost' IDENTIFIED BY '123456';
 
 GRANT INSERT, UPDATE, SELECT, DELETE, EXECUTE, TRIGGER, CREATE ROUTINE, ALTER ROUTINE, CREATE VIEW ON 
-FrostyThreads.* TO 'admin'@'localhost';
+db_frosty_threads.* TO 'admin'@'localhost';
 
 
 
