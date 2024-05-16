@@ -133,20 +133,14 @@ CREATE TABLE tb_comentarios(
 	CONSTRAINT fk_comentario_detalle FOREIGN KEY (id_detalle_orden) REFERENCES tb_detalle_ordenes(id_detalle_orden)
 );
 
+
+INSERT INTO tb_tipos_administradores(tipo_administrador) VALUES('SuperAdmin');
+
+INSERT INTO tb_administradores(nombre_administrador, apellido_administrador, email_administrador, clave_administrador, id_tipo_administrador)
+VALUES ('thats','gonzalez','fernandomelen20@gmail.com','$2a$12$Fa2fWaVubqlTlbM9A12abuLUoNyNRZvvY9gyBkP2bzIC7tvBy4s2q',1);
+
 CREATE USER 'admin'@'localhost' IDENTIFIED BY '123456';
 
 GRANT INSERT, UPDATE, SELECT, DELETE, EXECUTE, TRIGGER, CREATE ROUTINE, ALTER ROUTINE, CREATE VIEW ON 
 db_frosty_threads.* TO 'admin'@'localhost';
 
-USE db_frosty_threads;
-
-INSERT INTO tb_tipos_administradores(tipo_administrador) VALUES('SuperAdmin');
-
-
-
-INSERT INTO tb_provincias(provincia)
-VALUES('toronto');
-
-SELECT * FROM tb_clientes;
-
-INSERT INTO tb_domicilios(id_provincia, detalle_direccion, id_cliente) VALUES(1,'mi casa',1);
