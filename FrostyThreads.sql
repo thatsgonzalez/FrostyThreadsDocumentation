@@ -89,6 +89,7 @@ CREATE TABLE tb_administradores(
 	
 );
 
+
 CREATE TABLE tb_domicilios(
 	id_domicilio INT PRIMARY KEY AUTO_INCREMENT,
 	id_provincia INT NOT NULL,
@@ -137,9 +138,15 @@ CREATE USER 'admin'@'localhost' IDENTIFIED BY '123456';
 GRANT INSERT, UPDATE, SELECT, DELETE, EXECUTE, TRIGGER, CREATE ROUTINE, ALTER ROUTINE, CREATE VIEW ON 
 db_frosty_threads.* TO 'admin'@'localhost';
 
+USE db_frosty_threads;
+
+INSERT INTO tb_tipos_administradores(tipo_administrador) VALUES('SuperAdmin');
 
 
 
+INSERT INTO tb_provincias(provincia)
+VALUES('toronto');
 
+SELECT * FROM tb_clientes;
 
-
+INSERT INTO tb_domicilios(id_provincia, detalle_direccion, id_cliente) VALUES(1,'mi casa',1);
