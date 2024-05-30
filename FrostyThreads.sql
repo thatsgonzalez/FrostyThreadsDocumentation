@@ -11,27 +11,27 @@ CREATE TABLE tb_tipos_tallas(
 
 CREATE TABLE tb_tallas(
 	id_talla INT AUTO_INCREMENT PRIMARY KEY,
-	talla VARCHAR(8) NOT NULL,
+	talla VARCHAR(8) NOT NULL UNIQUE,
 	id_tipo_talla INT NOT NULL,
 	CONSTRAINT fk_talla_tipo FOREIGN KEY (id_tipo_talla) REFERENCES tb_tipos_tallas(id_tipo_talla)
 );
 
 CREATE TABLE tb_categorias(
 	id_categoria INT PRIMARY KEY AUTO_INCREMENT,
-	categoria VARCHAR(32) NOT NULL,
+	categoria VARCHAR(32) NOT NULL UNIQUE ,
 	categoria_img VARCHAR(25)
 );
 
 CREATE TABLE tb_descuentos(
 	id_descuento INT PRIMARY KEY AUTO_INCREMENT,
-	descuento INT NOT NULL,
+	descuento INT NOT NULL UNIQUE,
 	
 	CONSTRAINT ck_descuento CHECK(descuento>=0 && descuento<=100)
 );
 
 CREATE TABLE tb_marcas(
 	id_marca INT AUTO_INCREMENT PRIMARY KEY,
-	marca VARCHAR(32)
+	marca VARCHAR(32) UNIQUE 
 );
 
 CREATE TABLE tb_prendas(
@@ -57,12 +57,12 @@ CREATE TABLE tb_prendas(
 
 CREATE TABLE tb_provincias(
 	id_provincia INT PRIMARY KEY AUTO_INCREMENT,
-	provincia VARCHAR(32) NOT NULL 
+	provincia VARCHAR(32) NOT NULL UNIQUE 
 );
 
 CREATE TABLE tb_tipos_administradores(
 	id_tipo_administrador INT PRIMARY KEY AUTO_INCREMENT,
-	tipo_administrador VARCHAR(16) NOT NULL
+	tipo_administrador VARCHAR(16) NOT NULL UNIQUE 
 );
 
 CREATE TABLE tb_clientes(
@@ -71,6 +71,7 @@ CREATE TABLE tb_clientes(
 	apellido_cliente VARCHAR(64) NOT NULL,
 	email_cliente VARCHAR(128) NOT NULL,
 	clave_cliente VARCHAR(255) NOT NULL,
+	estado_cliente BOOL NOT NULL,
 	
 	CONSTRAINT u_cliente_email UNIQUE(email_cliente)
 	
@@ -104,7 +105,7 @@ CREATE TABLE tb_domicilios(
 CREATE TABLE tb_ordenes(
 	id_orden INT PRIMARY KEY AUTO_INCREMENT,
 	id_domicilio INT NOT NULL,
-	estado_orden ENUM('pendiente','enviado','recibido','cancelado'),
+	estado_orden ENUM('pendant','sent','received','canceled'),
 	
 	CONSTRAINT fk_orden_domicilio FOREIGN KEY (id_domicilio) REFERENCES tb_domicilios(id_domicilio)
 	
@@ -133,6 +134,8 @@ CREATE TABLE tb_comentarios(
 	CONSTRAINT fk_comentario_detalle FOREIGN KEY (id_detalle_orden) REFERENCES tb_detalle_ordenes(id_detalle_orden)
 );
 
+SELECT * FROM tb_clientes;
+
 
 INSERT INTO tb_tipos_administradores(tipo_administrador) VALUES('SuperAdmin');
 
@@ -143,4 +146,3 @@ CREATE USER 'admin'@'localhost' IDENTIFIED BY '123456';
 
 GRANT INSERT, UPDATE, SELECT, DELETE, EXECUTE, TRIGGER, CREATE ROUTINE, ALTER ROUTINE, CREATE VIEW ON 
 db_frosty_threads.* TO 'admin'@'localhost';
-
