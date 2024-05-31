@@ -38,7 +38,7 @@ CREATE TABLE tb_prendas(
 	id_prenda INT AUTO_INCREMENT PRIMARY KEY,
 	id_categoria INT NOT NULL,
 	id_talla INT NOT NULL,
-	precio INT NOT NULL,
+	precio DECIMAL(5,2) NOT NULL,
 	cantidad INT NOT NULL,
 	detalle_prenda VARCHAR(255),
 	id_marca INT NOT NULL,
@@ -106,6 +106,7 @@ CREATE TABLE tb_ordenes(
 	id_orden INT PRIMARY KEY AUTO_INCREMENT,
 	id_domicilio INT NOT NULL,
 	estado_orden ENUM('pendant','sent','received','canceled'),
+	fecha_orden DATE,
 	
 	CONSTRAINT fk_orden_domicilio FOREIGN KEY (id_domicilio) REFERENCES tb_domicilios(id_domicilio)
 	
@@ -116,7 +117,7 @@ CREATE TABLE tb_detalle_ordenes(
 	id_prenda INT NOT NULL,
 	id_orden INT NOT NULL,
 	cantidad_prenda INT NOT NULL,
-	fecha_orden DATE NOT NULL,
+	precio_prenda DECIMAL(5,2) NOT NULL,
 	
 	CONSTRAINT fk_detalle_prenda FOREIGN KEY (id_prenda) REFERENCES tb_prendas(id_prenda),
 	CONSTRAINT fk_detalle_orden FOREIGN KEY (id_orden) REFERENCES tb_ordenes(id_orden),
